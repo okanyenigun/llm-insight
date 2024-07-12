@@ -1,0 +1,8 @@
+- propmp'da daha spesifik ve case'e özel bilgiler msela türkiye'de bir bankayız vs.
+- google'da konu ile ilgili son haberleri agentla al ve besle
+- sadece comission var, diğer konuları neden yorumlamıyor
+- satırlar isimlerini netleştir, ve hatta prompt'ta da açıklayabilirsin
+langchain pandas agent:
+    - relationda correlation'a çok takılmıs ve obvious olan şeyleri de söylüyor. bir de c-level'a correlation vs gibi terimlerle konuşma.
+    - bilgileri verirken konu değil metrik bütünlüğü
+    -"The strong correlations suggest that customers engaged with one service are likely to engage with others. Strategies to enhance cross-selling could be beneficial. " reasoning zayıf.

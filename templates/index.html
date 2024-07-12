@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Upload your files</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.9.2/min/dropzone.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/bootstrap.min.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+  </head>
+  <body>
+    <div class="content-frame">
+      <h3>
+        File Upload
+        <small class="text-body-secondary">Upload Excel or CSV</small>
+      </h3>
+      <form
+        action="{{ url_for('handle_upload') }}"
+        class="dropzone"
+        id="my-awesome-dropzone"
+      >
+        <input type="submit" id="submit" style="visibility: hidden" />
+      </form>
+    </div>
+
+    <div class="content-frame">
+      <div id="data-preview"></div>
+    </div>
+    <div class="content-frame">
+      <h3>Pandas Agent</h3>
+      <div id="description-preview"></div>
+    </div>
+    <div class="content-frame">
+      <div id="ai-agent-question-section" style="display: none">
+        <textarea
+          id="agent-question-input"
+          placeholder="Enter your question"
+          rows="4"
+          cols="50"
+          class="form-control"
+        ></textarea>
+        <button
+          onclick="submitAgentQuestion()"
+          class="btn btn-primary"
+          style="margin: 16px 0"
+        >
+          Submit Question
+        </button>
+        <div id="ai-agent-response"></div>
+      </div>
+    </div>
+    <div class="content-frame">
+      <h3>Lida AI</h3>
+      <div id="lida-summary"></div>
+      <div id="lida-fields"></div>
+      <div id="lida-goals"></div>
+    </div>
+    <div class="content-frame">
+      <h3>Pandas AI</h3>
+      <div id="ai-question-section" style="display: none">
+        <textarea
+          id="ai-question-input"
+          placeholder="Enter your question"
+          rows="4"
+          cols="50"
+          class="form-control"
+        ></textarea>
+        <button
+          onclick="submitQuestion()"
+          class="btn btn-primary"
+          style="margin: 16px 0"
+        >
+          Submit Question
+        </button>
+        <div id="ai-response"></div>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.9.2/min/dropzone.min.js"></script>
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+  </body>
+</html>
