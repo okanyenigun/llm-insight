@@ -56,3 +56,4 @@ _map.html
 .cache
 .pytest_cache
 tests/baseline/
+flask_session/
